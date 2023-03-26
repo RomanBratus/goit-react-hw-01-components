@@ -1,30 +1,37 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
-const Statistics = ({ title, stats }) => {
-  const generateRandomColor = () => {
-    return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-      Math.random() * 256
-    )}, ${Math.floor(Math.random() * 256)})`;
-  };
+function randColor() {
+  const r = () => Math.floor(Math.random() * 256);
+  const colorBack = 'rgb(' + r() + ',' + r() + ',' + r() + ',' + 0.3 + ')';
+  return colorBack;
+}
 
+function Statistics({ title, stats }) {
+  // console.log(stats);
   return (
-    <section>
-      {title && <h2>{title}</h2>}
-      <ul>
-        {stats.map(stat => (
-          <li
-            key={stat.id}
-            style={{ backgroundColor: generateRandomColor() }}
-          >
-            <span>{stat.label}</span>
-            <span>{stat.value}</span>
-          </li>
-        ))}
-      </ul>
+    <section className={css.statistics_main}>
+      <section className={css.statistics_title}>
+        {title && <h2>{title}</h2>}
+
+        <ul className={css.statistics_list}>
+          {stats.map(({ id, label, percentage }) => {
+            return (
+              <li
+                className={css.statistics_item}
+                key={id}
+                style={{ backgroundColor: randColor() }}
+              >
+                <span className={css.statistics_label}>{label}</span>
+                <span className={css.statistics_percentage}>{percentage}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </section>
   );
-};
+}
 
 Statistics.propTypes = {
   title: PropTypes.string,
@@ -32,9 +39,8 @@ Statistics.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
-      value: PropTypes.number.isRequired,
-    })
+      percentage: PropTypes.number.isRequired,
+    }).isRequired
   ).isRequired,
 };
-
 export default Statistics;

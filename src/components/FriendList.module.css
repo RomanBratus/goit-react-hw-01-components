@@ -1,0 +1,63 @@
+p {
+  margin: 0px;
+}
+.friends_main {
+  background-color: #e4dbdb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  width: 370px;
+  box-shadow: 0 0 10px #3d2f26ed;
+  border-radius: 10px;
+  margin: 20px;
+}
+.friends_item {
+  display: flex;
+  flex-direction: row;
+
+  width: 70%;
+  border-bottom: #7e6f7498 2px;
+  box-shadow: 0 0 8px #300657ed;
+  padding: 20px;
+  background-color: #7e6f7449;
+  margin-bottom: 10px;
+}
+.friends_status {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.friends__list {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  padding: 0;
+}
+.friends_on {
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 30px;
+  background-color: rgb(4, 73, 4);
+}
+.friends_off {
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 30px;
+  background-color: rgb(94, 6, 6);
+}
+.friends_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+}
