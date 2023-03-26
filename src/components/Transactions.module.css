@@ -1,0 +1,31 @@
+.transact_main {
+  margin-top: 30px;
+  background-color: #e4dbdb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  width: 370px;
+  box-shadow: 0 0 10px #3d2f26ed;
+  border-radius: 10px;
+}
+.transact_tab {
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 90%;
+}
+.transact_thead {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #e17ceb;
+  padding: 10px;
+}
+
+.transact_tr {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #4b0752;
+}

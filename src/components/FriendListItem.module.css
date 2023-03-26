@@ -1,0 +1,11 @@
+.friends_avatar {
+  /* margin-left: 10px; */
+  width: 80px;
+  margin-right: 10px;
+}
+.friends_name {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: #47222f;
+}
