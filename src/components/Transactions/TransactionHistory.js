@@ -8,7 +8,6 @@ function randColor() {
   return colorBack;
 }
 function TransactionHistory({ items }) {
-  
   return (
     <section className={css.transact_main}>
       <table className={css.transact_tab}>
@@ -22,7 +21,6 @@ function TransactionHistory({ items }) {
 
         <tbody className={css.transact_tbody}>
         {items.map(({ id, type, amount, currency }) => {
-
           return (
             <tr
               key={id}

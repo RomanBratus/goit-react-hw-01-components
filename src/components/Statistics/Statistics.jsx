@@ -8,7 +8,7 @@ function randColor() {
 }
 
 function Statistics({ title, stats }) {
-  // console.log(stats);
+
   return (
     <section className={css.statistics_main}>
       <section className={css.statistics_title}>
@@ -29,6 +29,7 @@ function Statistics({ title, stats }) {
           })}
         </ul>
       </section>
+
     </section>
   );
 }
